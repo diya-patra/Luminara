@@ -1,0 +1,226 @@
+/* Google Fonts: Lemonada */
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;700&display=swap');
+
+/* Root palette from Figma */
+:root {
+    --brand-blue: #3F51B5;
+    --brand-yellow: #FFF9C4;
+    --button-blue: #1700E9;
+    --card-radius: 18px;
+    --font-family: 'Lemonada', cursive;
+    --sidebar-width: 220px;
+    --shadow: 0 4px 18px rgba(68, 59, 109, 0.13);
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #4a54c8 20%, #FFF9C4 100%);
+}
+
+/* Sidebar navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 22px 0 22px;
+    z-index: 2;
+}
+
+.sidebar .logo {
+    width: 120px;
+    margin-bottom: 36px;
+}
+
+.sidebar button,
+.sidebar a {
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: var(--shadow);
+    margin: 15px 0;
+    padding: 10px 24px;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    color: #2a2a2a;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+.sidebar .active {
+    background: var(--brand-yellow);
+    color: var(--brand-blue);
+    font-weight: bold;
+}
+.sidebar button:hover,
+.sidebar a:hover {
+    background: var(--brand-yellow);
+    color: var(--brand-blue);
+}
+
+/* Main container */
+.main-container {
+    margin-left: calc(var(--sidebar-width) + 30px);
+    padding: 40px 24px;
+}
+
+/* Card styling (blog post, editor, etc.) */
+.card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 26px;
+    padding: 22px 30px;
+    max-width: 600px;
+    min-width: 340px;
+}
+
+.card .author-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+.card .author-avatar {
+    width: 42px;
+    height: 42px;
+    background: #7868EA;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+/* Title, subtitle, timestamp styles */
+.card .post-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+.card .post-meta {
+    font-size: 1rem;
+    color: #5946d4;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+.card .post-body {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+/* Create/Edit post textarea and fields */
+.card input[type="text"],
+.card textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1.5px solid #dfdfdf;
+    padding: 11px 16px;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    font-family: var(--font-family);
+    background: #fff;
+    outline: none;
+}
+.card textarea {
+    min-height: 140px;
+}
+
+/* Publish and Submit buttons */
+.button, .btn {
+    background: var(--button-blue);
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    border-radius: 13px;
+    padding: 9px 32px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background 0.24s;
+    box-shadow: var(--shadow);
+}
+.button:hover, .btn:hover {
+    background: #2a2aa8;
+}
+
+/* Login/Register Forms */
+.form-panel {
+    background: rgba(255,255,255,0.82);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    max-width: 420px;
+    margin: 70px auto;
+    padding: 58px 40px 40px 40px;
+    text-align: center;
+}
+.form-panel h2 {
+    font-weight: 300;
+    color: #3751aa;
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+
+/* Form input fields */
+.form-panel input[type="text"],
+.form-panel input[type="email"],
+.form-panel input[type="password"] {
+    width: 100%;
+    border-radius: 10px;
+    border: 1.7px solid #dfdfdf;
+    padding: 13px 18px;
+    font-size: 1.08rem;
+    margin-bottom: 23px;
+    font-family: var(--font-family);
+    background: #fff;
+    outline: none;
+}
+
+/* Submit Button */
+.form-panel .button {
+    width: 88%;
+}
+
+/* Links & Text */
+.form-panel a {
+    color: #1700E9;
+    text-decoration: underline;
+    font-size: 1.05rem;
+}
+.form-panel .minor {
+    color: #222;
+    font-size: 1rem;
+    margin-top: 12px;
+    font-family: var(--font-family);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .sidebar { width: 135px; }
+    .main-container { margin-left: 160px; padding: 12px; }
+    .card { max-width: 97vw; min-width: 90vw;}
+}
+
+@media (max-width: 660px) {
+    body { min-width: 320px; }
+    .sidebar {
+        position: static; width: 100%; flex-direction: row; align-items: center; justify-content: flex-start;
+        height: auto; padding: 16px 7px;
+    }
+    .main-container { margin-left: 0; padding: 2px;}
+    .card { padding: 4vw; }
+}
+
+/* Logo image */
+.logo { width: 120px; height: auto; display:block; margin-bottom:24px;}
