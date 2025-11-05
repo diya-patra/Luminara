@@ -6,7 +6,6 @@ PHP based web application.
 [![Figma Design Preview](https://github.com/diya-patra/Luminara/blob/main/Home%20Page.png)](https://www.figma.com/community/file/1566106311257875974/content-management-system-and-forum-ui-ux)
 
 [View the live Figma file here](https://www.figma.com/community/file/1566106311257875974/content-management-system-and-forum-ui-ux)
->>>>>>> 00d3ddd2bfbcb4f6077f4428e82cb5a0ae74fa71
 
 # Luminara CMS
 
