@@ -94,15 +94,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="form-panel">
-        <img src="assets/luminara-logo.png" alt="Luminara Logo" class="logo" />
+        <!-- <img src="assets/luminara-logo.png" alt="Luminara Logo" class="logo" /> -->
         <h2>Sign-Up with a <br>new account</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <label for="username">Username</label>
             <input type="text" name="username" placeholder="Username" value="<?php echo htmlspecialchars($username); ?>" required>
             <span class="minor" style="color:red;"><?php echo $username_err; ?></span>
+            <label for="email">Email</label>
             <input type="email" name="email" placeholder="Email" value="<?php echo htmlspecialchars($email); ?>" required>
             <span class="minor" style="color:red;"><?php echo $email_err; ?></span>
+            <label for="password">Password</label>
             <input type="password" name="password" placeholder="Password" required>
             <span class="minor" style="color:red;"><?php echo $password_err; ?></span>
+            <label for="confirm_password">Confirm Password</label>
             <input type="password" name="confirm_password" placeholder="Confirm Password" required>
             <span class="minor" style="color:red;"><?php echo $confirm_password_err; ?></span>
             <button type="submit" class="button">Submit</button>
