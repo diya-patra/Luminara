@@ -58,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                 <strong><?php echo htmlspecialchars($_SESSION["username"]); ?></strong>
             </div>
             <form action="" method="post">
-                <input type="text" name="title" placeholder="Title" value="<?php echo htmlspecialchars($title); ?>" required style="font-weight:600;">
+                <input style="width:100%;border-radius:7px;padding:10px;" type="text" name="title" placeholder="Title" value="<?php echo htmlspecialchars($title); ?>" required style="font-weight:600;">
                 <span class="minor" style="color:red;"><?php echo $title_err; ?></span>
-                <textarea name="content" placeholder="Share your story" required><?php echo htmlspecialchars($content); ?></textarea>
+                <textarea style="width:100%;border-radius:7px;padding:10px;" name="content" placeholder="Share your story" required><?php echo htmlspecialchars($content); ?></textarea>
                 <span class="minor" style="color:red;"><?php echo $content_err; ?></span>
-                <select name="status" style="width:164px;margin-top:10px;border-radius:7px;padding:7px;">
+                <select style="width:164px;margin-top:10px;border-radius:7px;padding:7px;" name="status">
                     <option value="draft" <?php if($status=='draft')echo 'selected'; ?>>Save as Draft</option>
                     <option value="published" <?php if($status=='published')echo 'selected'; ?>>Publish</option>
                 </select>
