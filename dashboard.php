@@ -32,7 +32,7 @@ $stmt->close();
 <head>
     <meta charset="UTF-8">
     <title>Dashboard | Luminara</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
