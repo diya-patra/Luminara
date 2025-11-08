@@ -18,6 +18,7 @@ $user = $loggedin ? $_SESSION["username"] : null;
 <head>
     <meta charset="UTF-8">
     <title>Luminara Blog</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
